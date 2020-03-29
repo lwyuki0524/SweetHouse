@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-navbutton-color" content="#0088FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0088FF">
+	<link rel="icon" sizes="128x128" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<link rel="stylesheet" href="css.css">
+	<title>產品列表</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="body">
+			<!--導覽開始-->
+			<script src="js/head.js"></script>
+			<!--導覽結束-->
+
+			<!--主內容開始-->
+			<article>
+
+				<div id="left_menu" class="left_menu">
+					<!--左邊分類欄位開始-->
+					<ul class="left_menu_ul">
+						<span style="font-weight: bold;">📌商品分類</span>
+						<hr style="box-shadow: 1px -4px 20px 0px #ff00196b;">
+						<li class="to_subtitle_btn">
+							<span><a href="#糖果" style="color: #2a2a2a;font-weight: 600;">糖果</a></span>
+							<ul>
+								<li><a href="#糖果_巧克力">巧克力</a></li>
+								<li><a href="#糖果_軟糖">軟糖</a></li>
+								<li><a href="#糖果_口香糖">口香糖</a></li>
+							</ul>
+							<hr>
+						</li>
+						<li class="to_subtitle_btn">
+							<span><a href="#餅乾" style="color: #2a2a2a;font-weight: 600;">餅乾</a></span>
+							<ul>
+								<li><a href="#餅乾_巧克力">巧克力</a></li>
+								<li><a href="#餅乾_草莓">草莓</a></li>
+							</ul>
+							<hr>
+						</li>
+						<li class="to_subtitle_btn">
+							<span><a href="#布丁" style="color: #2a2a2a;font-weight: 600;">布丁</a></span>
+							<ul>
+								<li><a href="#布丁_雞蛋口味">雞蛋</a></li>
+								<li><a href="#布丁_果凍類">果凍</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+				<!--左邊分類欄位結束-->
+				<script src="js/left_menu.js"></script>
+
+
+				<div class="right_article">
+					<!--右邊文章欄位開始-->
+
+					<div class="sub_title_b sub_title">產品列表</div>
+
+					<!--子分類之1開始-->
+					<span class="anchor" id="糖果"></span><!--書籤-->
+					<div class="ProductSection">
+						<!--style="background: url(img/blur-bokeh-bright.jpg) no-repeat;background-size: cover;"-->
+						<div class="PStitle_container pic_title" style="background: url(img/blur-bokeh-bright.jpg) center center no-repeat;background-size: cover;">
+							
+							<span class="sub_title sub_title_c">糖果</span>
+						</div>
+
+						<div class="CardContainer">
+							<!--母分類容器開始(裝所有糖果的產品)-->
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝糖果裡是巧克力的產品)-->
+								<span class="anchor" id="糖果_巧克力"></span>
+								<!--書籤-->
+								<h2>巧克力</h2>
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>巧克力</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+
+							</div>
+							<!--子分類容器結束(裝糖果裡是巧克力的產品)-->
+
+
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝糖果裡是軟糖的產品)-->
+								<span class="anchor" id="糖果_軟糖"></span>
+								<!--書籤-->
+								<h2>軟糖</h2>
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>巧克力</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+							</div>
+							<!--子分類容器結束(裝糖果裡是軟糖的產品)-->
+
+
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝糖果裡是口香糖的產品)-->
+								<span class="anchor" id="糖果_口香糖"></span>
+								<!--書籤-->
+								<h2>口香糖</h2>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+							</div>
+							<!--子分類容器結束(裝糖果裡是口香糖的產品)-->
+
+						</div>
+						<!--母分類容器結束(裝糖果的產品)-->
+
+					</div>
+					<!--子分類之1結束-->
+
+					<span class="anchor" id="餅乾"></span>
+					<!--書籤-->
+					<!--子分類之2開始-->
+					<div class="ProductSection">
+						<!--style="background: url(img/biscuit-cookies-food.jpg) no-repeat;background-size: cover;"-->
+						<div class="PStitle_container pic_title" style="background: url('img/biscuit-cookies-food.jpg') center center no-repeat;background-size: cover;">
+
+							<span class="sub_title sub_title_c">餅乾</span>
+						</div>
+
+						<div class="CardContainer">
+							<!--母分類容器開始(裝餅乾的產品)-->
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝餅乾裡是巧克力的產品)-->
+								<span class="anchor" id="餅乾_巧克力"></span>
+								<!--書籤-->
+								<h2>巧克力</h2>
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>巧克力</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+							</div>
+							<!--子分類容器結束(裝餅乾裡是巧克力的產品)-->
+
+
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝餅乾裡是草莓的產品)-->
+								<span class="anchor" id="餅乾_草莓"></span>
+								<!--書籤-->
+								<h2>草莓</h2>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+							</div>
+							<!--子分類容器結束(裝餅乾裡是草莓的產品)-->
+
+						</div>
+						<!--母分類容器結束(裝餅乾的產品)-->
+					</div>
+					<!--子分類之2結束-->
+
+					<span class="anchor" id="布丁"></span>
+					<!--書籤-->
+					<!--子分類之3開始-->
+					<div class="ProductSection">
+						<!--style="background: url(img/wesual-click.jpg) no-repeat;margin-bottom: 50px;"-->
+						<div class="PStitle_container pic_title" style="background: url('img/wesual-click.jpg') center center no-repeat;background-size: cover;">
+
+							<span class="sub_title sub_title_c">布丁</span>
+						</div>
+
+						<div class="CardContainer">
+							<!--母分類容器開始(裝布丁的產品)-->
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝布丁裡是雞蛋口味的產品)-->
+								<span class="anchor" id="布丁_雞蛋口味"></span>
+								<!--書籤-->
+								<h2>雞蛋口味</h2>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+							</div>
+							<!--子分類容器結束(裝布丁裡是雞蛋口味的產品)-->
+
+
+							<div class="sub_CardContainer">
+								<!--子分類容器開始(裝布丁裡是果凍類的產品)-->
+								<span class="anchor" id="布丁_果凍類"></span>
+								<!--書籤-->
+								<h2>果凍類</h2>
+
+								<div class="card">
+									<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+										<!--點到產品卡要連到每個產品自己的資訊畫面-->
+										<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+										<div class="card_text">
+											<!--產品名稱-->
+											<span>軟糖</span>
+											<div style="padding-top: 5px;">$35</div>
+										</div>
+									</a>
+									<div class="cardlink_box">
+										<button class="cardlink" type="button">
+											<span>加入購物車</span>
+										</button>
+										<!--這邊點了之後要要加資料到資料庫-->
+									</div>
+								</div>
+
+							</div>
+							<!--子分類容器結束(裝布丁裡是果凍類的產品)-->
+
+						</div>
+						<!--母分類容器結束(裝布丁的產品)-->
+					</div>
+					<!--子分類之3結束-->
+
+				</div>
+				<!--右邊文章欄位結束-->
+
+			</article>
+			<!--主內容結束-->
+		</div>
+		<!--footer區-->
+		<footer>
+			<script src="js/footer.js"></script>
+		</footer>
+		<!--footer區-->
+	</div>
+
+</body>
+
+</html>

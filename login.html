@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-navbutton-color" content="#0088FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0088FF">
+	<link rel="icon" sizes="128x128" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<link rel="stylesheet" href="css.css">
+	<title>登入／註冊 - 零食屋</title>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+	<style type="text/css">
+		body {
+			background: #E7CACC url("img/login_bg.jpg");
+			background-attachment: fixed;
+			background-size: 100% auto;
+			background-position: 0px 0px;
+		}
+
+		#validate_form label.error,
+		#validate_form2 label.error {
+			color: #e4007f;
+			padding-top: 5px;
+			font-size: 13px;
+			line-height: 18px;
+			width: auto;
+			float: left;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="body">
+			<!--導覽開始-->
+			<script src="js/head.js"></script>
+			<!--導覽結束-->
+			<!--主內容開始-->
+			<article>
+				<div id="tran_block">
+					<div id="tran_img" class="tran_img"></div>
+					<!--分隔-->
+					<div class="tran_block" style="max-width: 800px;">
+						<div class="tran_tab">
+							<button class="tran_tablinks" onclick="openCity(event, 'signin')" id="defaultOpen">會員登入</button>
+							<button class="tran_tablinks" onclick="openCity(event, 'register')">註冊</button>
+						</div>
+						<!--小分隔-->
+						<div id="signin" class="tran_tabcontent">
+							<form id="validate_form" method="post" action="">
+								<div class="tran_block_main">
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">👥 帳號</div>
+										<div class="tran_data_td"><input placeholder="請輸入您的帳號" name="account" type="text" required /></div>
+									</div>
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">🔑 密碼</div>
+										<div class="tran_data_td">
+											<!--密碼輸入框開始-->
+											<input onfocus="PW_Focus()" onblur="PW_Onblur()" type="password" id="PW_input" placeholder="請輸入您的密碼" name="password" required />
+											<img class="PW_img" id="PW_img" onclick="SH_PW()" src="img/visible.svg">
+											<!--密碼輸入框結束-->
+										</div>
+									</div>
+									<!--迷你分隔-->
+								</div>
+								<div class="tran_submit">
+									<input class="submit" type="submit" value="登入" />
+									<input class="submit" type="reset" value="重寫" />
+								</div>
+							</form>
+						</div>
+						<!--小分隔-->
+						<div id="register" class="tran_tabcontent">
+							<form id="validate_form2" method="post" action="">
+								<div class="tran_block_main">
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">🗣 姓名</div>
+										<div class="tran_data_td"><input placeholder="請輸入您的本名" name="name" type="text" required /></div>
+									</div>
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">👥 帳號</div>
+										<div class="tran_data_td"><input placeholder="請輸入您的帳號（至少 5 個字元）" name="account" type="text" minlength="5" required /></div>
+									</div>
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">🔑 密碼</div>
+										<div class="tran_data_td"><input onfocus="PW_Focus()" onblur="PW_Onblur()" placeholder="請輸入您的密碼（6～15 個字元的英文字母、數字混合）" name="password" type="password" id="password" class="password_hard" required />
+											<div id="errors"></div>
+										</div>
+									</div>
+									<!--迷你分隔-->
+									<div class="tran_data_tr">
+										<div class="tran_data_th">🔐 確認密碼</div>
+										<div class="tran_data_td"><input onfocus="PW_Focus()" onblur="PW_Onblur()" placeholder="請再次輸入您的密碼" name="password_again" type="password" required /></div>
+									</div>
+									<!--迷你分隔-->
+								</div>
+								<div class="tran_submit">
+									<input class="submit" type="submit" value="註冊" />
+									<input class="submit" type="reset" value="重寫" />
+								</div>
+							</form>
+						</div>
+						<!--小分隔-->
+					</div>
+					<!--分隔-->
+				</div>
+			</article>
+			<!--主內容結束-->
+			<script>
+				$(document).ready(function() {
+					//登入的確認密碼偵測
+					$("#validate_form").validate({
+						submitHandler: function(form) {
+							form.submit();
+						},
+						errorPlacement: function(error, element) {
+							element.closest('.tran_data_td').append(error);
+						},
+						rules: {
+							password_again: {
+								equalTo: '#password'
+							}
+						}
+					});
+					//註冊的確認密碼偵測
+					$("#validate_form2").validate({
+						submitHandler: function(form) {
+							form.submit();
+						},
+						errorPlacement: function(error, element) {
+							element.closest('.tran_data_td').append(error);
+						},
+						rules: {
+							password_again: {
+								equalTo: '#password'
+							}
+						}
+					});
+				});
+				// 用來修改預設的規則的錯誤文字;
+				jQuery.extend(jQuery.validator.messages, {
+					required: "此欄位必填。",
+					remote: "Please fix this field。",
+					email: "請輸入正確的 Email 信箱。",
+					url: "請輸入正確的網址。",
+					date: "請輸入正確的日期。",
+					dateISO: "請輸入正確的 (ISO) 日期格式。",
+					number: "本欄位請填入數字。",
+					digits: "本欄位請填入數字。",
+					creditcard: "請輸入正確的信用卡號。",
+					equalTo: "請再次輸入相同的值。",
+					maxlength: $.validator.format("至多輸入 {0} 個字元。"),
+					minlength: $.validator.format("至少輸入 {0} 個字元。"),
+					rangelength: $.validator.format("請輸入 {0} 到 {1} 個字元。"),
+					range: $.validator.format("請輸入 {0} 到 {1} 的數字。"),
+					max: $.validator.format("請輸入小於等於 {0} 的值。"),
+					min: $.validator.format("請輸入大於等於 {0} 的值。")
+				});
+				//自訂偵測條件
+				jQuery.validator.addMethod("password_hard", function(value, element) {
+					var str = value;
+					var result = false;
+
+					if (str.length > 0) {
+						var patt = /^[a-zA-Z0-9]{6,15}$/;
+						var result1 = patt.test(str);
+						//先測試是否有英文
+						var pattEN = /[a-zA-Z]{1,}/;
+						result2 = pattEN.test(str);
+						//先測試是否有數字
+						var pattDigit = /[0-9]{1,}/;
+						result3 = pattDigit.test(str);
+
+						if (result1 == true && result2 == true && result3 == true) {
+							result = true;
+						} else {
+							result = false;
+						}
+					} else {
+						result = true;
+					}
+					return result;
+				}, "密碼為 6～15 個字元的英文字母、數字混合，不包含空白鍵及標點符號。");
+				//密碼輸入框
+				var PWImg = document.getElementById("PW_img");
+				var PWInput = document.getElementById("PW_input");
+
+				function SH_PW() {
+					if (PWInput.type == "password") {
+						PWInput.type = "text";
+						PWImg.src = "img/invisible.svg";
+					} else {
+						PWInput.type = "password";
+						PWImg.src = "img/visible.svg";
+					}
+				}
+				//密碼焦點更改上方圖示
+				function PW_Focus() {
+					document.getElementById('tran_img').style.background = "url(img/embarrassed_2.svg)";
+				}
+				//密碼非焦點更改上方圖示
+				function PW_Onblur() {
+					document.getElementById('tran_img').style.background = "url(img/embarrassed_1.svg)";
+				}
+
+				function openCity(evt, cityName) {
+					var i, tabcontent, tablinks;
+					tabcontent = document.getElementsByClassName("tran_tabcontent");
+					for (i = 0; i < tabcontent.length; i++) {
+						tabcontent[i].style.display = "none";
+					}
+					tablinks = document.getElementsByClassName("tran_tablinks");
+					for (i = 0; i < tablinks.length; i++) {
+						tablinks[i].className = tablinks[i].className.replace(" active", "");
+					}
+					document.getElementById(cityName).style.display = "block";
+					evt.currentTarget.className += " active";
+				}
+
+				document.getElementById("defaultOpen").click();
+
+			</script>
+		</div>
+		<!--footer區-->
+		<footer>
+			<script src="js/footer.js"></script>
+			<!--icon作者標註-->
+			<div style="color:#525252;">Icons made by <a href="https://www.flaticon.com/authors/twitter" title="Twitter" style="color:#525252;">Twitter</a> from <a href="https://www.flaticon.com/" title="Flaticon" style="color:#525252;">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank" style="color:#525252;">CC 3.0 BY</a></div>
+		</footer>
+		<!--footer區-->
+	</div>
+</body>
+
+</html>

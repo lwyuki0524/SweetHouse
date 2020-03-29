@@ -1,0 +1,34 @@
+document.write("<div class=\"fourrow\">");
+document.write("<div class=\"footer_row\">");
+document.write("<span class=\"footer_title\">");
+document.write("<img style=\"width:auto;padding-right:5px;\" src=\"img/footer/pen-pencil-icon.svg\" alt=\"🖋\">");
+document.write("關於我們</span>");
+document.write("<a href=\"#\" title=\"關於我們\" style=\"width: 100%;\"><img src=\"img/logo3.svg\"></a><br>觀看次數：0");
+document.write("</div>");
+document.write("<div class=\"footer_row\">");
+document.write("<span class=\"footer_title\">");
+document.write("<img style=\"width:auto;padding-right:5px;\" src=\"img/footer/pen-pencil-icon.svg\" alt=\"🖋\">");
+document.write("會員專區</span>");
+document.write("<span style=\"margin: 20px;\"><a href=\"member.html\" title=\"會員中心\" class=\"footer_link\">會員中心</a></span>");
+document.write("<span style=\"margin: 10px;\"><a href=\"transaction.html\" title=\"訂單查詢\" class=\"footer_link\">訂單查詢</a></span>");
+document.write("</div>");
+document.write("<div class=\"footer_row\">");
+document.write("<span class=\"footer_title\">");
+document.write("<img style=\"width:auto;padding-right:5px;\" src=\"img/footer/pen-pencil-icon.svg\" alt=\"🖋\">");
+document.write("購物說明</span>");
+document.write("<span style=\"margin: 10px;\"><a href=\"Flow_Chart.html\" title=\"購物流程\" class=\"footer_link\">購物流程</a></span>");
+document.write("</div>");
+document.write("<div class=\"footer_row\">");
+document.write("<span  class=\"footer_title\">");
+document.write("<img style=\"width:auto;padding-right:5px;\" src=\"img/footer/pen-pencil-icon.svg\" alt=\"🖋\">");
+document.write("聯絡資訊</span>");
+document.write("<span style=\"margin: 10px;\">");
+document.write("<a href=\"mailto:s10640134@cycu.org.tw\" class=\"footer_link\" title=\"s10640134@cycu.org.tw\">");
+document.write("寫信給我們");
+document.write("</a>");
+document.write("</span>");
+document.write("</div>");
+document.write("</div>");
+document.write("<div>Copyright © 2018 零食屋小組</div>");
+						
+					

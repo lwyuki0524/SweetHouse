@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-navbutton-color" content="#0088FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0088FF">
+	<link rel="icon" sizes="128x128" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<link rel="stylesheet" href="css.css">
+	<title>購物流程 - 零食屋</title>
+		<style>
+		/* 導覽位置標示 */
+		#navbar-Flow_Chart {
+			background-color: #bd9090;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="body">
+			<!--導覽開始-->
+			<nav>
+				<div class="navbar">
+					<!--分隔-->
+					<div class="navbar-logo">
+						<a href="index.html"><img src="img/logo.png" alt=""></a>
+					</div>
+					<!--分隔-->
+					<a href="index.html">
+						<div class="navbar-a" id="navbar-index">首頁</div>
+					</a>
+					<!--分隔-->
+					<a href="about.html">
+						<div class="navbar-a" id="navbar-about">關於我們</div>
+					</a>
+					<!--分隔-->
+					<a href="Flow_Chart.html">
+						<div class="navbar-a" id="navbar-Flow_Chart">購物流程</div>
+					</a>
+					<!--分隔-->
+					<div class="dropdown">
+						<a href="#">
+							<div class="dropbtn">
+								<div class="dropbtn-style">分類<div class="dropbtn-icon"></div>
+								</div>
+							</div>
+						</a>
+						<div class="dropdown-content">
+							<div class="triangle"></div>
+							<div class="body">
+								<div class="dropdown-row">
+									<!--小分隔-->
+									<div class="dropdown-cell">
+										<div class="dropdown-title">糖果</div>
+										<a href="ProductList.html#糖果">
+											<div class="dropdown-a">全部</div>
+										</a>
+										<a href="ProductList.html#糖果_巧克力">
+											<div class="dropdown-a">巧克力</div>
+										</a>
+										<a href="ProductList.html#糖果_軟糖">
+											<div class="dropdown-a">軟糖</div>
+										</a>
+										<a href="ProductList.html#糖果_口香糖">
+											<div class="dropdown-a">口香糖</div>
+										</a>
+									</div>
+									<!--小分隔-->
+									<div class="dropdown-cell">
+										<div class="dropdown-title">餅乾</div>
+										<a href="ProductList.html#餅乾">
+											<div class="dropdown-a">全部</div>
+										</a>
+										<a href="ProductList.html#餅乾_巧克力">
+											<div class="dropdown-a">巧克力</div>
+										</a>
+										<a href="ProductList.html#餅乾_草莓">
+											<div class="dropdown-a">草莓</div>
+										</a>
+									</div>
+									<!--小分隔-->
+									<div class="dropdown-cell">
+										<div class="dropdown-title">布丁</div>
+										<a href="ProductList.html#布丁">
+											<div class="dropdown-a">全部</div>
+										</a>
+										<a href="ProductList.html#布丁_雞蛋口味">
+											<div class="dropdown-a">雞蛋</div>
+										</a>
+										<a href="ProductList.html#布丁_果凍類">
+											<div class="dropdown-a">果凍</div>
+										</a>
+									</div>
+									<!--小分隔-->
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--分隔，這邊是登入前的按鈕-->
+					<div class="navbar-right">
+						<a href="login.html" title="登入／註冊"><img src="img/enter.svg" alt=""></a>
+					</div>
+					<!--分隔，登入後將改用這個部分的按鈕XD「style="display: none;"」用來隱藏按鈕用。-->
+					<div class="navbar-right" style="display: none;">
+						<a href="#" title="登出"><img src="img/exit.svg" alt=""></a>
+					</div>
+					<!--分隔，登入後將改用這個部分的按鈕XD「style="display: none;"」用來隱藏按鈕用。-->
+					<div class="navbar-right" style="display: none;">
+						<a href="member.html" title="會員中心"><img src="img/round-account.svg" alt=""></a>
+					</div>
+					<!--分隔-->
+					<div class="navbar-right">
+						<a href="ShoppingCarList.html" title="購物車" style="position: relative;"><img src="img/shopping-cart.svg" alt=""><span class="navbar-right-num">0
+								<!--已加入購物車的商品數量-->
+							</span></a>
+					</div>
+					<!--分隔-->
+				</div>
+				<!--進度條-->
+				<div class="progress_container">
+					<div class="progress-bar" id="myBar"></div>
+				</div> 
+				<!--進度條-->
+			</nav>
+			<!--導覽結束-->
+			<div class="flow_banner">
+				<img style="width: 100%;" src="img/flow_chart/flowbanner.svg">
+				<div class="flow_banner_title">
+					購物流程
+				</div>
+			</div>
+
+			<!--主內容開始-->
+			<article>
+				
+
+				<div>
+					<div class="con_left"><!--flow1左-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/one.svg" alt="one">
+							<h1>尋找商品</h1>
+						</div>
+						<div class="chart_div">
+							<img style="width: 70%;" class="chart" src="img\flow_chart/flow1.png" alt="1.從分類尋找商品">
+							<img style="width: 70%;" class="chart" src="img\flow_chart/flow1_2.png" alt="也可以點下面分類">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_right"><!--flow2右-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/two.svg" alt="two">
+							<h1>選擇商品</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow2.png" alt="2.選擇需要的商品卡">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_left"><!--flow3左-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/three.svg" alt="three">
+							<h1>加入購物車</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow3.png" alt="3.選擇數量後，加入購物車">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_right"><!--flow2右-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/four.svg" alt="four">
+							<h1>結帳</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow4.png" alt="4.確認購物清單後結帳">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_left"><!--flow3左-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/five.svg" alt="five">
+							<h1>登入/註冊</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow5.png" alt="5.登入/註冊">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_right"><!--flow2右-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/six.svg" alt="six">
+							<h1>確認訂單</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow6.png" alt="6.確認訂單、填寫資料，送出後即完成訂購">
+						</div>
+					</div>
+
+					<hr>
+
+					<div class="con_left"><!--flow3左-->
+						<div class="flow_num_div">
+							<img class="flow_num" src="img/flow_chart/seven.svg" alt="seven">
+							<h1>查看購物紀錄</h1>
+						</div>
+						<div class="chart_div">
+							<img class="chart" src="img\flow_chart/flow7.png" alt="7.至會員中心查看購物紀錄">
+						</div>
+					</div>
+					
+				</div>
+
+			</article>
+			<!--主內容結束-->
+
+		</div>
+		<!--footer區-->
+		<footer>
+			<script src="js/footer.js"></script>
+			<!--icon作者標註-->
+			<div style="color:#525252;">
+				Icons made by <a style="color:#525252;" href="https://www.flaticon.com/authors/google" title="Google">Google</a>
+				from<a style="color:#525252;" href="https://www.flaticon.com/"  title="Flaticon">www.flaticon.com</a>
+				is licensed by <a  style="color:#525252;" href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+			</div>
+			<!--icon作者標註-->
+		</footer>
+		<!--footer區-->
+		<script>
+				// When the user scrolls the page, execute myFunction 
+				window.onscroll = function() {myFunction()};
+
+				function myFunction() {
+				  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+				  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+				  var scrolled = (winScroll / height) * 100;
+				  document.getElementById("myBar").style.width = scrolled + "%";
+				}
+			</script>
+	</div>
+</body>
+</html>

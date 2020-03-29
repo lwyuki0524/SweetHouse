@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-navbutton-color" content="#0088FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0088FF">
+	<link rel="icon" sizes="128x128" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<link rel="stylesheet" href="css.css">
+	<title>會員中心 - 零食屋</title>
+	<style type="text/css">
+		body {
+			background: #E7CACC url("img/login_bg.jpg");
+			background-attachment: fixed;
+			background-size: 100% auto;
+			background-position: 0px 0px;
+		}
+
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<div id="body">
+			<!--導覽開始-->
+			<script src="js/head.js"></script>
+			<!--導覽結束-->
+			<!--主內容開始-->
+			<article>
+				<div class="TITLE"><span>會員中心</span></div>
+				<!--分隔-->
+				<form method="post" action="">
+					<div class="tran_block">
+						<div class="tran_block_title">個人資料</div>
+						<div class="tran_block_main">
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">姓名</div>
+								<div class="tran_data_td"><input name="name" type="text" required /></div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">帳號</div>
+								<div class="tran_data_td"><input name="account" type="text" required /></div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">地址</div>
+								<div class="tran_data_td"><input name="address" type="text" required /></div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">電話</div>
+								<div class="tran_data_td"><input name="phone" type="text" required /></div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">付款方式</div>
+								<div class="tran_data_td">
+									<select size="1" name="payment">
+										<option>信用卡</option>
+										<option>到貨付款</option>
+										<option>銀行匯款</option>
+									</select>
+								</div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">密碼</div>
+								<div class="tran_data_td"><input placeholder="若要修改資料，請輸入您的密碼" name="password" type="password" required /></div>
+							</div>
+							<!--小分隔-->
+							<div class="tran_data_tr">
+								<div class="tran_data_th">確認密碼</div>
+								<div class="tran_data_td"><input placeholder="若要修改資料，請再次輸入您的密碼" name="re_password" type="password" required /></div>
+							</div>
+							<!--小分隔-->
+						</div>
+						<div class="tran_submit">
+							<input class="submit" type="submit" value="送出修改" />
+						</div>
+					</div>
+				</form>
+				<!--分隔-->
+				<div class="tran_block">
+					<div class="tran_block_title">購物記錄</div>
+					<div class="tran_block_main tran_block_pb15">
+						<!--小分隔-->
+						<div class="tran_order_tr">
+							<div class="tran_order_th">產品名稱</div>
+							<div class="tran_order_th">產品單價</div>
+							<div class="tran_order_th">產品數量</div>
+							<div class="tran_order_th">總共價格</div>
+						</div>
+						<!--中分隔-->
+						<div class="tran_order_tr">
+							<div class="tran_order_td">OREO 巧克力</div>
+							<div class="tran_order_td">30</div>
+							<div class="tran_order_td">2</div>
+							<div class="tran_order_td">60</div>
+						</div>
+						<!--小分隔-->
+						<div class="tran_order_tr">
+							<div class="tran_order_td">健達巧克力</div>
+							<div class="tran_order_td">40</div>
+							<div class="tran_order_td">2</div>
+							<div class="tran_order_td">80</div>
+						</div>
+						<!--小分隔-->
+						<div class="tran_order_tr" style="background: #c9b6b6;">
+							<div class="tran_order_th">時間</div>
+							<div class="tran_order_td">2018/12/10 23:45</div>
+							<div class="tran_order_th">總計</div>
+							<div class="tran_order_td">140</div>
+						</div>
+						<!--中分隔-->
+					</div>
+				</div>
+			</article>
+			<!--主內容結束-->
+		</div>
+		<!--footer區-->
+		<footer>
+			<script src="js/footer.js"></script>
+		</footer>
+		<!--footer區-->
+	</div>
+</body>
+
+</html>

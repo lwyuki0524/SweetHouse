@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css">
+	<meta name="msapplication-navbutton-color" content="#0088FF">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#0088FF">
+	<link rel="icon" sizes="128x128" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.ico">
+	<link rel="stylesheet" href="css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<title>產品資訊</title>
+</head>
+
+<body>
+	<div id="container">
+		<div id="body">
+			<!--導覽開始-->
+			<script src="js/head.js"></script>
+			<!--導覽結束-->
+
+			<!--主內容開始-->
+			<article>
+				<div class="pro_display">
+					<!--產品展示區(裡面包括產品照片、加入購物車、產品資訊)-->
+					<div class="show_left">
+						<!--左邊區塊(產品照片、加入購物車)-->
+						<div class="show_pro_img">
+							<img id="pro_pic" src="img/kinder_chocolate.png" alt="產品照片" style="width: 500px;">
+							<!--放大鏡的js我放在下面article結束的地方-->
+						</div>
+
+
+
+						<form name="add_car_form" class="add_car_box" action="" method="">
+							<!--加入購物車(包含數量)-->
+							<span style="display: flex;"><div style="min-width: 50px;margin: auto;font-size: 20px;">數量:</div>
+							<div style="display: flex;margin: auto;">
+								<input class="operation" type="button" name="minus" value="-" onclick="jian()">
+									<input style="width: 100px" type="text" name="setnumber" value="0" id="amount" onkeyup="value=value.replace(/[^\d]/g,'') ">
+									<div class="alert">請輸入大於1的數字</div>
+								<input class="operation" type="button" name="plus" value="+" onclick="jia()">
+							</div>
+							</span>
+									
+							<span>
+								<button type="button" class="btn_to_add" onClick="check()"><img src="img/shopping-cart.svg" alt="加入購物車" style="width: 40px;margin: 5px 10px;">
+									加入購物車
+								</button>
+							</span>
+						</form>
+					</div>
+					
+					<script>//判斷是否填寫購物數量
+						function jian() {
+							var i = document.getElementById("amount").valueOf().value;
+							//var i = parseInt(document.getElementById("amount").valueOf().value);
+							if(i==""){i=0;}
+							else i=parseInt(document.getElementById("amount").valueOf().value)-1;
+							if (i <= 0) {
+								i = 0;
+							}
+							document.getElementById("amount").valueOf().value = i;
+						}
+						function jia() {
+							var i = document.getElementById("amount").valueOf().value;
+							if(i==""){i=1;}
+							else i=parseInt(document.getElementById("amount").valueOf().value)+1;
+							document.getElementById("amount").valueOf().value = i;
+						}
+							function check(){
+								if(add_car_form.setnumber.value == ""||add_car_form.setnumber.value == 'NaN'||add_car_form.setnumber.value<=0){
+									//add_car_form.setnumber.value=0;
+									$(document).ready(function(){
+										$('.alert').addClass('alert-success').show().delay(800).fadeOut();
+									})
+								}
+								else add_car_form.submit();
+							}
+						
+					</script>
+
+
+
+					<div class="pro_Info">
+						<!--右邊區塊(產品名稱、價錢、介紹)-->
+						<!--分類-->
+						<span class="classify">
+							分類: &nbsp;
+							<span><a href="ProductList.html#糖果" title="糖果-分類">糖果</a></span>>>
+							<span><a href="ProductList.html#糖果_巧克力" title="巧克力-子分類">巧克力</a></span>>>
+							<span>建達巧克力</span>
+						</span>
+
+						<h1 class="pro_name">產品名稱</h1>
+						<!--每個產品的名稱-->
+						<div class="price_text">NT$ 30</span></div>
+						<!--每個產品的價格-->
+
+						<div class="pro_intro_box">
+							<span style="margin: 5px;">產品介紹</span><i class="down"></i>
+							<div class="pro_intro_text">
+								<!--每個產品的介紹-->
+								產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。
+								產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。
+								產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。產品介紹。
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="review_box">
+					<!--評論區-->
+					<div class="review_title">
+						評論區
+					</div>
+
+					<div class="star_review">
+						<!--包括使用者評論表單、其他人評論-->
+
+
+						<div class="user_rev_section">
+							<form action="" method="post">
+								<!--使用者填寫之評論表單-->
+								<img class="headpic" src="img/user_icon.svg" alt="使用者大頭貼">
+								<div class="rev_mid">
+									<div style="display: flex;">
+										<span style="font-size: 18px;padding: 5px 30px 5px 10px;">使用者名稱</span>
+										<div class="rating">
+											<!--星等區塊-->
+											<input type="radio" id="star5" name="rating" value="5" hidden />
+											<label for="star5">★</label>
+
+											<input type="radio" id="star4" name="rating" value="4" hidden />
+											<label for="star4">★</label>
+
+											<input type="radio" id="star3" name="rating" value="3" hidden />
+											<label for="star3">★</label>
+
+											<input type="radio" id="star2" name="rating" value="2" hidden />
+											<label for="star2">★</label>
+
+											<input type="radio" id="star1" name="rating" value="1" hidden />
+											<label for="star1">★</label>
+										</div>
+									</div>
+									<textarea name="user_review" cols="20" rows="2" wrap="hard"></textarea>
+								</div>
+								<div class="form_button">
+									<input type="submit" value="送出" />
+									<input type="reset" value="重填" />
+								</div>
+							</form>
+							<!--使用者填寫之評論表單結束-->
+						</div>
+
+						<hr>
+
+						<div class="rev_section">
+							<!--其他使用者評論區-->
+							<img class="headpic" src="img/user_icon.svg" alt="使用者大頭貼">
+							<div style="width: 100%;">
+								<div style="display: flex;flex-direction: row;">
+									<span style="font-size: 18px;padding: 5px 30px 5px 10px;">使用者名稱</span>
+									<div class="rev_section_rate">
+
+										<!--下面是用js呈現星星-->
+										<!--但是需要看使用者之前輸入的star是顯示幾顆星-->
+										<script>
+											var num=0;
+											function Starat(num){//方法:num是幾，就會有幾顆星變色
+												for(var i=0;i<num;i++){
+													document.write("<span class='checked'>★</span>");
+												}
+												for(var i=0;i<(5-num);i++){
+													document.write("<span>★</span>");
+												}
+											}
+
+											num=4;//這是給四顆星的意思，只要改這裡就可以換
+											Starat(num);
+										</script>
+									</div>
+								</div>
+
+								<div class="textarea">
+									<!--這裡要顯示使用者的評論-->
+									評論評論評論評論評論評論評論
+									評論評論評論評論評論評論評論
+									評論評論評論評論評論評論評論
+									評論評論評論評論評論評論評論
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+				<div class="recommand_box">
+					<!--推薦商品-->
+					<div style="display: flex;" class="sub_title recommand_box_title">
+						<img class="recommand_icon" src="img/like-heart-icon.svg" alt="💖">
+						<div style="margin: 10px;">推薦商品</div>
+					</div>
+					<div class="CardContainer">
+						<div class="card">
+							<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+								<!--點到產品卡要連到每個產品自己的資訊畫面-->
+								<div><img src="img/hi_chew_peach.png" alt="產品照片"></div>
+								<div class="card_text">
+									<!--產品名稱-->
+									<span>軟糖</span>
+									<div style="padding-top: 5px;">$35</div>
+								</div>
+							</a>
+							<div class="cardlink_box">
+								<button class="cardlink" type="button">
+									<span>加入購物車</span>
+								</button>
+								<!--這邊點了之後要要加資料到資料庫-->
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+								<!--點到產品卡要連到每個產品自己的資訊畫面-->
+								<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+								<div class="card_text">
+									<!--產品名稱-->
+									<span>巧克力</span>
+									<div style="padding-top: 5px;">$35</div>
+								</div>
+							</a>
+							<div class="cardlink_box">
+								<button class="cardlink" type="button">
+									<span>加入購物車</span>
+								</button>
+								<!--這邊點了之後要要加資料到資料庫-->
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+								<!--點到產品卡要連到每個產品自己的資訊畫面-->
+								<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+								<div class="card_text">
+									<!--產品名稱-->
+									<span>巧克力</span>
+									<div style="padding-top: 5px;">$35</div>
+								</div>
+							</a>
+							<div class="cardlink_box">
+								<button class="cardlink" type="button">
+									<span>加入購物車</span>
+								</button>
+								<!--這邊點了之後要要加資料到資料庫-->
+							</div>
+						</div>
+
+						<div class="card">
+							<a class="link_proinfo" href="Product_info.html" title="產品詳細資訊">
+								<!--點到產品卡要連到每個產品自己的資訊畫面-->
+								<div><img src="img/kinder_chocolate.png" alt="產品照片"></div>
+								<div class="card_text">
+									<!--產品名稱-->
+									<span>巧克力</span>
+									<div style="padding-top: 5px;">$35</div>
+								</div>
+							</a>
+							<div class="cardlink_box">
+								<button class="cardlink" type="button">
+									<span>加入購物車</span>
+								</button>
+								<!--這邊點了之後要要加資料到資料庫-->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+
+				<!--放大鏡的js-->
+				<script src="js/product_zoom.js"></script>
+				<!--放大鏡的js-->
+			</article>
+			<!--主內容結束-->
+
+
+		</div>
+		<!--footer區-->
+		<footer>
+			<script src="js/footer.js"></script>
+		</footer>
+		<!--footer區-->
+	</div>
+
+
+</body>
+
+</html>

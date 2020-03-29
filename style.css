@@ -1,0 +1,697 @@
+body {
+	background: #f6f6f6;
+	font-family: Arial, 'Microsoft JhengHei', sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: #2f2f2f;
+	text-align: center;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 回頂部開始 */
+
+.gotop {
+	z-index: 999;
+	position: fixed;
+	bottom: 30px;
+	right: 10px;
+	cursor: pointer;
+	opacity: .6;
+	width: 50px;
+	height: 50px;
+	background: #b55454 center no-repeat url(img/up-arrow.svg);
+	background-size: 28px 28px;
+	border-radius: 50%;
+	border: 1px rgba(255, 255, 255, 0.6) solid;
+	box-shadow: 0px 0px 3px #FFFFFF;
+	transition: all 0.2s linear;
+}
+
+.gotop:hover {
+	opacity: .9;
+	box-shadow: 0px 0px 6px #FFFFFF;
+}
+
+/* 回頂部結束 */
+
+/* 導覽開始 */
+
+nav {
+	overflow: hidden;
+	background: #9b6461;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, .3);
+	z-index: 99998;
+}
+
+.navbar {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.navbar-a {
+	float: left;
+	font-size: 16px;
+	line-height: 22px;
+	color: white;
+	text-align: center;
+	padding: 16px 20px;
+	text-decoration: none;
+	transition: all 0.2s linear;
+}
+
+.navbar-logo {
+	float: left;
+	margin: 0 3px;
+}
+
+.navbar-logo a img {
+	margin: 0;
+}
+
+.dropdown {
+	float: left;
+	overflow: hidden;
+}
+
+.dropbtn {
+	border: none;
+	outline: none;
+	color: white;
+	padding: 8px;
+	background-color: inherit;
+	font: inherit;
+	margin: 0;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+
+.dropbtn-style {
+	background-color: #fffc;
+	border: 1px solid #cdcdcd;
+	border-radius: 20px;
+	color: #1a1a1a;
+	padding: 8px 15px;
+	line-height: 18px;
+	transition: all 0.2s linear;
+}
+
+.dropbtn-icon {
+	width: 18px;
+	height: 18px;
+	background: center no-repeat url(img/dropbtn-down-arrow.svg);
+	background-size: 18px 18px;
+	transition: all 0.2s linear;
+	float: right;
+	margin-left: 5px;
+}
+
+.dropbtn:hover > .dropbtn-style {
+	background-color: #e7bfbfcc;
+	color: #6b3838e6;
+	border: 1px solid #e0ababe6;
+}
+
+.dropbtn:hover > .dropbtn-style > .dropbtn-icon {
+	background: center no-repeat url(img/dropbtn-up-arrow.svg);
+	background-size: 18px 18px;
+}
+
+.navbar-a:hover {
+	background-color: #c3b0b0;
+}
+
+.dropdown-content {
+	display: none;
+	position: fixed;
+	width: 450px;
+	z-index: 1;
+}
+
+.triangle {
+	margin: 8px 0px 0px 38px;
+	width: 30px;
+	height: 14px;
+	background: center no-repeat url(img/drop-up-arrow.svg);
+	background-size: 30px 30px;
+	padding: 0;
+	filter: drop-shadow(0 -3px 5px #0000004d);
+	opacity: .9;
+}
+
+.dropdown-content .body {
+	width: 100%;
+	box-shadow: 0 1px 8px rgba(0, 0, 0, .2);
+	border-radius: 5px;
+	display: table;
+	padding: 15px;
+	background: rgba(255, 255, 255, 0.95);
+}
+
+.dropdown-row {
+	display: table-row;
+}
+
+.dropdown-cell {
+	display: table-cell;
+	width: calc(100%/3);
+	padding: 10px;
+}
+
+.dropdown-title {
+	font-size: 18px;
+	border-bottom: 1px rgba(236, 0, 0, 0.6) solid;
+	margin: 5px 0;
+	margin-bottom: 10px;
+	padding: 8px 0;
+	font-weight: bold;
+	color: rgba(236, 0, 0, 0.6);
+}
+
+.dropdown-a {
+	font-size: 16px;
+	margin: 5px 0;
+	padding: 8px 0;
+	color: rgba(0, 0, 0, 0.7);
+	transition: all 0.2s linear;
+}
+
+.dropdown-a:hover {
+	color: rgba(236, 0, 0, 0.7);
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.navbar-right {
+	float: right;
+	margin: 0 3px;
+	opacity: .75;
+	transition: all 0.2s linear;
+}
+
+.navbar-right:hover {
+	opacity: 1;
+	filter: drop-shadow(0px 1px 5px rgba(255, 255, 255, .3));
+}
+
+.navbar-right img {
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+}
+
+.navbar-right-num {
+	position: absolute;
+	top: -10px;
+	right: -5px;
+	padding: 5px 8px;
+	border-radius: 50%;
+	background: red;
+	color: white;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+/* 導覽結束 */
+
+article {
+	padding-top: 80px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.TITLE {
+	margin: 15px auto;
+	padding-bottom: 18px;
+}
+
+.TITLE span {
+	font-size: 30px;
+	font-weight: bold;
+	padding: 8px;
+	color: #9b6461;
+	border-bottom: 5px dotted #9b6461;
+	text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.7);
+}
+
+/* 幻燈片開始 */
+
+.mySlides {
+	display: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.slideshow-container {
+	position: relative;
+	margin: auto;
+}
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background: #0006;
+}
+
+.numbertext {
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	background: #00000080;
+	border-radius: 10px;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 6px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active {
+	background-color: #717171;
+}
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@media only screen and (max-width: 300px) {
+	.text {
+		font-size: 11px
+	}
+}
+
+/* 幻燈片結束 */
+
+/* 頁籤開始 */
+
+.tran_tab {
+	overflow: hidden;
+	background-color: inherit;
+	border-radius: 15px 15px 0 0;
+}
+
+.tran_tab button {
+	width: 50%;
+	background-color: #d6b4b4;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 18px;
+	transition: 0.3s;
+	font-size: 20px;
+}
+
+.tran_tab button:hover {
+	background-color: #debfbf;
+}
+
+.tran_tab button.active {
+	background-color: inherit;
+}
+
+.tran_tabcontent {
+	display: none;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-radius: 0 0 15px 15px;
+}
+
+/* 頁籤結束 */
+
+/* 交易畫面&登入／註冊&會員中心開始 */
+
+#tran_block {
+	margin: 50px auto;
+}
+
+.tran_img {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	margin: 25px auto;
+	background-size: 200px 200px !important;
+	filter: drop-shadow(0px 1px 5px rgba(0, 0, 0, .3));
+	background: url(img/embarrassed_1.svg);
+}
+
+.tran_block {
+	width: 80%;
+	margin: 40px auto;
+	background: #dccdcd;
+	box-shadow: rgba(0, 0, 0, 0.3) 1px 1px 15px 0;
+	border-radius: 15px;
+}
+
+.tran_block input {
+	width: 100%;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 6px;
+	border: none;
+	outline: none;
+	background: #fffc;
+	border-radius: 5px;
+	transition: all 0.2s linear;
+}
+
+.tran_block input:focus {
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 6px 0;
+}
+
+.tran_block select {
+	width: 100%;
+	font-size: 18px;
+	line-height: 24px;
+	padding: 6px;
+	border: none;
+	outline: none;
+	background: #fffc;
+	border-radius: 5px;
+	transition: all 0.2s linear;
+}
+
+.tran_block select:focus {
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 6px 0;
+}
+
+.tran_block_title {
+	width: 100%;
+	padding: 15px;
+	background: #ffffff1f;
+	font-size: 26px;
+	line-height: 40px;
+	border-radius: 15px 15px 0 0;
+}
+
+.tran_block_main {
+	width: 100%;
+	font-size: 18px;
+	line-height: 28px;
+	display: table;
+}
+
+.tran_block_pb15 {
+	padding-bottom: 15px;
+}
+
+.tran_order_tr {
+	width: 100%;
+	display: table-row;
+}
+
+.tran_order_th {
+	width: 25%;
+	padding: 10px;
+	display: table-cell;
+	background: #4848481a;
+}
+
+.tran_order_td {
+	width: 25%;
+	padding: 10px;
+	display: table-cell;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+	transition: all 0.2s linear;
+}
+
+.tran_order_td:hover {
+	box-shadow: 0px 0px 10px rgba(91, 42, 27, .2);
+}
+
+.tran_data_tr {
+	width: 100%;
+	display: table-row;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+}
+
+.tran_data_th {
+	width: 200px;
+	padding: 10px;
+	display: table-cell;
+	background: #4848481a;
+}
+
+.tran_data_td {
+	padding: 10px;
+	display: table-cell;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+	transition: all 0.2s linear;
+}
+
+.tran_data_td:hover {
+	box-shadow: 0px 0px 10px rgba(91, 42, 27, .2);
+}
+
+.tran_submit {
+	width: 95%;
+	margin: 25px auto;
+	display: inline-block;
+}
+
+.submit {
+	width: auto !important;
+	margin: 0 5px !important;
+	padding: 8px 25px !important;
+	box-shadow: 0px 0px 5px #00000082;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 24px;
+	background: #fffc;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	transition: all 0.2s linear;
+}
+
+.submit:hover {
+	box-shadow: 0px 0px 12px #00000082;
+}
+
+/* 交易畫面&登入／註冊&會員中心結束 */
+
+/* 關於我們開始 */
+
+.about-head {
+	width: 100%;
+	height: 430px;
+	margin-bottom: 50px;
+	padding-top: 190px;
+	color: white;
+	background-image: url(img/about/bkg.jpg);
+	background-position: 0px 50%;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	border-bottom: 25px solid rgba(188, 101, 101, 0.5);
+}
+
+.about-head-title {
+	width: 100%;
+	font-size: 55px;
+	text-shadow: 2px 2px 0px #150101;
+}
+
+.about-features {
+	background: rgba(0, 0, 0, 0.8);
+	border: 5px solid rgba(188, 101, 101, 0.5);
+	font-size: 18px;
+	position: absolute;
+	top: 280px;
+	right: 72px;
+	width: 420px;
+	padding: 15px;
+	text-shadow: 0px 0px 3px #fff9;
+	line-height: 28px;
+}
+
+.about {
+	width: 95%;
+	margin: 15px auto;
+}
+
+.about-title {
+	margin: 5px;
+	font-size: 26px;
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #1501014d;
+	text-align: left;
+	border-left: 13px solid rgba(188, 101, 101, 0.5);
+	padding: 7px 15px;
+	color: rgba(171, 92, 92, 0.75);
+}
+
+.about-table {
+	width: 100%;
+	margin: 20px auto;
+	padding: 10px;
+	display: table;
+}
+
+.about-tr {
+	width: 100%;
+	display: table-row;
+}
+
+.about-td {
+	width: 50%;
+	padding: 10px;
+	display: table-cell;
+	text-align: left;
+	vertical-align: top;
+	color: #212121;
+}
+
+.about-img {
+	width: 200px;
+	margin: 5px 25px;
+	vertical-align: top;
+	border-radius: 3px;
+	float: left;
+	box-shadow: 0 4px 8px 0 rgb(192, 192, 192);
+}
+
+.about-con {
+	margin: 10px;
+	padding: 5px;
+	vertical-align: top;
+	font-size: 17px;
+	line-height: 28px;
+	text-shadow: 2px 2px 2px #1501011a;
+}
+
+.about-con-t {
+	padding: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.map {
+	width: 95%;
+	margin: 15px auto;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgb(192, 192, 192);
+}
+
+.map iframe {
+	margin-bottom: -4px;
+	border-radius: 3px;
+}
+
+/* 關於我們結束 */
+
+/* footer 高度修正開始 */
+
+html,
+body {
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	position: relative;
+}
+
+#body {
+	padding-bottom: 400px;
+	/* footer 高度 */
+}
+
+footer {
+	position: absolute !important;
+	bottom: 0 !important;
+	width: 100%;
+}
+
+/* footer 高度修正結束 */
+
+/* 密碼輸入框開始 */
+
+.PW_img {
+	width: 25px;
+	float: right;
+	margin-bottom: -25px;
+	position: relative;
+	right: 10px;
+	bottom: 30px;
+	opacity: .75;
+	transition: all 0.2s linear;
+}
+
+.PW_img:hover {
+	opacity: .95;
+}
+
+/* 密碼輸入框結束 */
+
+/* css.css 修正區 */
+
+footer a {
+	color: #FFF;
+}
+
+/*以下是流程圖區域的導覽進度條(Yuki)*/
+.progress_container{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 7px;
+    background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #E91E63;;
+  width: 0%;
+}
+/*以上是流程圖區域的導覽進度條*/
